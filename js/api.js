@@ -144,7 +144,8 @@ async function handleApiRequest(url) {
                     
                     // 提取第一个播放源的集数（通常为主要源）
                     if (playSources.length > 0) {
-                        const mainSource = playSources[0];
+                        // m3u8 资源优先
+                        const mainSource = playSources.find(e => e.endsWith('.m3u8'));
                         const episodeList = mainSource.split('#');
                         
                         // 从每个集数中提取URL
