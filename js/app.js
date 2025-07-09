@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 默认启用豆瓣功能
         localStorage.setItem('doubanEnabled', 'true');
+        initDouban();
 
         // 标记已初始化默认值
         localStorage.setItem('hasInitializedDefaults', 'true');
